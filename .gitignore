@@ -1,0 +1,432 @@
+Archive/Ganz  Feb 22.py
+Archive/Ganz  Feb 24.py
+Archive/Ganz Feb 7.py
+Archive/Ganz Feb 8.py
+Archive/ganz strategies.py
+Archive/Ganz_Game_Python.zip
+Archive/Ganz2  Feb 8.py
+Archive/Ganz2  Feb 15.py
+Archive/Ganz2  Feb 16.py
+Archive/Ganz2  Feb 16b.py
+Archive/Ganz2  Feb 17.py
+Archive/Ganz2  Feb 17b.py
+Archive/Ganz2  Feb 18.py
+Archive/Ganz2  Feb 18b.py
+Archive/Ganz2  Feb 18c.py
+Archive/Ganz2  Feb 19.py
+Archive/import random.py
+Compare JSON files.py
+__pycache__/ganz_strategies.cpython-312.pyc
+__pycache__/ganz_utils.cpython-312.pyc
+data/Ganz Strategy Score 174.63.json
+data/strategy_data - Best then updated goals.json
+data/strategy_data-original - 172.75.json
+data/strategy_data.json
+data/Archive/Ganz Strategy Score 172.06.json
+data/Archive/Ganz Strategy Score 174.22.json
+data/Archive/Ganz Strategy Score 174.63 - rounded.json
+data/Archive/strategy_data - 172 best so far.json
+data/Archive/strategy_data_rounded-173.json
+data/Archive/strategy_data.json
+scores/Ganz Strategy Score 170.16.json
+scores/Ganz Strategy Score 170.50.json
+scores/Ganz Strategy Score 170.57.json
+scores/Ganz Strategy Score 170.72.json
+scores/Ganz Strategy Score 170.76.json
+scores/Ganz Strategy Score 170.98.json
+scores/Ganz Strategy Score 174.27.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 102.83.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 103.83.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 104.44.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 104.79.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 105.56.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 106.10.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 107.62.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 107.75.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 108.44.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 109.66.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 109.93.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 110.89.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 111.11.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 111.21.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 111.70.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 112.99.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 113.41.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 113.80.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 113.82.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 113.87.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 113.91.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 114.24.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 114.76.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 114.90.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 114.93.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 114.98.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 115.08.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.08.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.12.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.26.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.35.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.58.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.60.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 116.88.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.02.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.14.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.44.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.48.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.83.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 117.91.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.21.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.29.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.51.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.52.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.58.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.68.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 118.82.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 119.22.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 119.32.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 119.51.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 119.92.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 120.07.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 120.12.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 120.47.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 120.65.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 120.74.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 121.28.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 121.51.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 122.81.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 123.09.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 123.20.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 123.47.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 123.51.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 123.78.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 124.42.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 124.49.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 124.81.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 124.92.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 125.38.json
+scores/Building from 102.83 posneg/Ganz Strategy Score 126.62.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 98.30.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 102.36.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 102.60.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 110.58.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 111.67.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 111.76.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 114.10.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 114.95.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 115.30.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 117.32.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 120.45.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 120.58.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 121.16.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 121.42.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 121.77.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 122.34.json
+scores/Climbing from 98.30 pos-only/Ganz Strategy Score 129.35.json
+scores/Completely Random Seeds/Ganz Strategy Score 65.54.json
+scores/Completely Random Seeds/Ganz Strategy Score 65.82.json
+scores/Completely Random Seeds/Ganz Strategy Score 65.87.json
+scores/Completely Random Seeds/Ganz Strategy Score 66.55.json
+scores/Completely Random Seeds/Ganz Strategy Score 66.66.json
+scores/Completely Random Seeds/Ganz Strategy Score 67.38.json
+scores/Completely Random Seeds/Ganz Strategy Score 69.19.json
+scores/Completely Random Seeds/Ganz Strategy Score 69.37.json
+scores/Completely Random Seeds/Ganz Strategy Score 69.57.json
+scores/Completely Random Seeds/Ganz Strategy Score 70.09.json
+scores/Completely Random Seeds/Ganz Strategy Score 70.57.json
+scores/Completely Random Seeds/Ganz Strategy Score 72.26.json
+scores/Completely Random Seeds/Ganz Strategy Score 72.54.json
+scores/Completely Random Seeds/Ganz Strategy Score 73.38.json
+scores/Completely Random Seeds/Ganz Strategy Score 73.79.json
+scores/Completely Random Seeds/Ganz Strategy Score 73.98.json
+scores/Completely Random Seeds/Ganz Strategy Score 74.04.json
+scores/Completely Random Seeds/Ganz Strategy Score 74.19.json
+scores/Completely Random Seeds/Ganz Strategy Score 74.21.json
+scores/Completely Random Seeds/Ganz Strategy Score 74.85.json
+scores/Completely Random Seeds/Ganz Strategy Score 74.87.json
+scores/Completely Random Seeds/Ganz Strategy Score 75.25.json
+scores/Completely Random Seeds/Ganz Strategy Score 76.18.json
+scores/Completely Random Seeds/Ganz Strategy Score 76.19.json
+scores/Completely Random Seeds/Ganz Strategy Score 76.58.json
+scores/Completely Random Seeds/Ganz Strategy Score 76.79.json
+scores/Completely Random Seeds/Ganz Strategy Score 77.65.json
+scores/Completely Random Seeds/Ganz Strategy Score 77.72.json
+scores/Completely Random Seeds/Ganz Strategy Score 77.73.json
+scores/Completely Random Seeds/Ganz Strategy Score 78.28.json
+scores/Completely Random Seeds/Ganz Strategy Score 78.54.json
+scores/Completely Random Seeds/Ganz Strategy Score 78.65.json
+scores/Completely Random Seeds/Ganz Strategy Score 78.77.json
+scores/Completely Random Seeds/Ganz Strategy Score 78.99.json
+scores/Completely Random Seeds/Ganz Strategy Score 79.30.json
+scores/Completely Random Seeds/Ganz Strategy Score 79.68.json
+scores/Completely Random Seeds/Ganz Strategy Score 81.09.json
+scores/Completely Random Seeds/Ganz Strategy Score 82.08.json
+scores/Completely Random Seeds/Ganz Strategy Score 82.56.json
+scores/Completely Random Seeds/Ganz Strategy Score 84.97.json
+scores/Completely Random Seeds/Ganz Strategy Score 85.09.json
+scores/Completely Random Seeds/Ganz Strategy Score 86.56.json
+scores/Completely Random Seeds/Ganz Strategy Score 86.76.json
+scores/Completely Random Seeds/Ganz Strategy Score 86.84.json
+scores/Completely Random Seeds/Ganz Strategy Score 88.19.json
+scores/Completely Random Seeds/Ganz Strategy Score 88.48.json
+scores/Completely Random Seeds/Ganz Strategy Score 89.21.json
+scores/Completely Random Seeds/Ganz Strategy Score 92.90.json
+scores/Completely Random Seeds/Ganz Strategy Score 94.10.json
+scores/Completely Random Seeds/Ganz Strategy Score 96.49.json
+scores/Completely Random Seeds/Ganz Strategy Score 96.81.json
+scores/Completely Random Seeds/Ganz Strategy Score 97.28.json
+scores/Completely Random Seeds/Ganz Strategy Score 99.71.json
+scores/Completely Random Seeds/Ganz Strategy Score 102.83.json
+scores/High Scores/Ganz Strategy Score 172.57.json
+scores/High Scores/Ganz Strategy Score 172.64.json
+scores/High Scores/Ganz Strategy Score 172.76.json
+scores/High Scores/Ganz Strategy Score 173.55.json
+scores/High Scores/Ganz Strategy Score 173.62.json
+scores/High Scores/Ganz Strategy Score 175.81.json
+scores/Low Scores/Ganz Strategy Score 131.04.json
+scores/Low Scores/Ganz Strategy Score 132.00.json
+scores/Low Scores/Ganz Strategy Score 132.14.json
+scores/Low Scores/Ganz Strategy Score 132.85.json
+scores/Low Scores/Ganz Strategy Score 134.41.json
+scores/Low Scores/Ganz Strategy Score 135.28.json
+scores/Low Scores/Ganz Strategy Score 135.53.json
+scores/Low Scores/Ganz Strategy Score 135.72.json
+scores/Low Scores/Ganz Strategy Score 136.26.json
+scores/Low Scores/Ganz Strategy Score 138.08.json
+scores/Low Scores/Ganz Strategy Score 138.54.json
+scores/Low Scores/Ganz Strategy Score 139.19.json
+scores/Low Scores/Ganz Strategy Score 139.21.json
+scores/Low Scores/Ganz Strategy Score 139.26.json
+scores/Low Scores/Ganz Strategy Score 139.41.json
+scores/Low Scores/Ganz Strategy Score 139.69.json
+scores/Low Scores/Ganz Strategy Score 140.25.json
+scores/Low Scores/Ganz Strategy Score 140.37.json
+scores/Low Scores/Ganz Strategy Score 140.86.json
+scores/Low Scores/Ganz Strategy Score 141.02.json
+scores/Low Scores/Ganz Strategy Score 141.24.json
+scores/Low Scores/Ganz Strategy Score 141.49.json
+scores/Low Scores/Ganz Strategy Score 141.52.json
+scores/Low Scores/Ganz Strategy Score 141.67.json
+scores/Low Scores/Ganz Strategy Score 141.96.json
+scores/Low Scores/Ganz Strategy Score 142.03.json
+scores/Low Scores/Ganz Strategy Score 142.20.json
+scores/Low Scores/Ganz Strategy Score 142.82.json
+scores/Low Scores/Ganz Strategy Score 142.97.json
+scores/Low Scores/Ganz Strategy Score 143.15.json
+scores/Low Scores/Ganz Strategy Score 143.17.json
+scores/Low Scores/Ganz Strategy Score 143.18.json
+scores/Low Scores/Ganz Strategy Score 143.24.json
+scores/Low Scores/Ganz Strategy Score 143.49.json
+scores/Low Scores/Ganz Strategy Score 143.55.json
+scores/Low Scores/Ganz Strategy Score 143.76.json
+scores/Low Scores/Ganz Strategy Score 143.86.json
+scores/Low Scores/Ganz Strategy Score 144.20.json
+scores/Low Scores/Ganz Strategy Score 144.28.json
+scores/Low Scores/Ganz Strategy Score 144.33.json
+scores/Low Scores/Ganz Strategy Score 144.68.json
+scores/Low Scores/Ganz Strategy Score 144.78.json
+scores/Low Scores/Ganz Strategy Score 144.87.json
+scores/Low Scores/Ganz Strategy Score 144.96.json
+scores/Low Scores/Ganz Strategy Score 145.31.json
+scores/Low Scores/Ganz Strategy Score 145.46.json
+scores/Low Scores/Ganz Strategy Score 145.76.json
+scores/Low Scores/Ganz Strategy Score 145.83.json
+scores/Low Scores/Ganz Strategy Score 146.09.json
+scores/Low Scores/Ganz Strategy Score 146.13.json
+scores/Low Scores/Ganz Strategy Score 146.31.json
+scores/Low Scores/Ganz Strategy Score 146.64.json
+scores/Low Scores/Ganz Strategy Score 146.67.json
+scores/Low Scores/Ganz Strategy Score 146.70.json
+scores/Low Scores/Ganz Strategy Score 147.00.json
+scores/Low Scores/Ganz Strategy Score 147.22.json
+scores/Low Scores/Ganz Strategy Score 147.24.json
+scores/Low Scores/Ganz Strategy Score 147.36.json
+scores/Low Scores/Ganz Strategy Score 147.73.json
+scores/Low Scores/Ganz Strategy Score 147.78.json
+scores/Low Scores/Ganz Strategy Score 147.85.json
+scores/Low Scores/Ganz Strategy Score 148.48.json
+scores/Low Scores/Ganz Strategy Score 148.99.json
+scores/Low Scores/Ganz Strategy Score 149.13.json
+scores/Low Scores/Ganz Strategy Score 149.18.json
+scores/Low Scores/Ganz Strategy Score 149.71.json
+scores/Low Scores/Ganz Strategy Score 149.84.json
+scores/Low Scores/Ganz Strategy Score 149.90.json
+scores/Low Scores/Ganz Strategy Score 150.18.json
+scores/Low Scores/Ganz Strategy Score 150.35.json
+scores/Low Scores/Ganz Strategy Score 150.52.json
+scores/Low Scores/Ganz Strategy Score 151.41.json
+scores/Low Scores/Ganz Strategy Score 151.74.json
+scores/Low Scores/Ganz Strategy Score 152.34.json
+scores/Low Scores/Ganz Strategy Score 152.71.json
+scores/Low Scores/Ganz Strategy Score 152.91.json
+scores/Low Scores/Ganz Strategy Score 152.98.json
+scores/Low Scores/Ganz Strategy Score 153.06.json
+scores/Low Scores/Ganz Strategy Score 153.35.json
+scores/Low Scores/Ganz Strategy Score 153.56.json
+scores/Low Scores/Ganz Strategy Score 153.63.json
+scores/Low Scores/Ganz Strategy Score 153.82.json
+scores/Low Scores/Ganz Strategy Score 153.89.json
+scores/Low Scores/Ganz Strategy Score 155.04.json
+scores/Low Scores/Ganz Strategy Score 155.15.json
+scores/Low Scores/Ganz Strategy Score 155.65.json
+scores/Low Scores/Ganz Strategy Score 155.87.json
+scores/Low Scores/Ganz Strategy Score 156.84.json
+scores/Low Scores/Ganz Strategy Score 157.01.json
+scores/Low Scores/Ganz Strategy Score 158.09.json
+scores/Low Scores/Ganz Strategy Score 158.78.json
+scores/Low Scores/Ganz Strategy Score 158.80.json
+scores/Low Scores/Ganz Strategy Score 159.38.json
+scores/Low Scores/Ganz Strategy Score 159.70.json
+scores/Low Scores/Ganz Strategy Score 159.99.json
+scores/Low Scores/Ganz Strategy Score 160.11.json
+scores/Low Scores/Ganz Strategy Score 160.29.json
+scores/Low Scores/Ganz Strategy Score 160.51.json
+scores/Low Scores/Ganz Strategy Score 160.82.json
+scores/Low Scores/Ganz Strategy Score 160.88.json
+scores/Low Scores/Ganz Strategy Score 161.49.json
+scores/Low Scores/Ganz Strategy Score 161.73.json
+scores/Low Scores/Ganz Strategy Score 162.45.json
+scores/Low Scores/Ganz Strategy Score 162.78.json
+scores/Low Scores/Ganz Strategy Score 162.93.json
+scores/Low Scores/Ganz Strategy Score 163.05.json
+scores/Low Scores/Ganz Strategy Score 163.13.json
+scores/Low Scores/Ganz Strategy Score 164.89.json
+scores/Low Scores/Ganz Strategy Score 165.32.json
+scores/Low Scores/Ganz Strategy Score 165.37.json
+scores/Low Scores/Ganz Strategy Score 165.38.json
+scores/Low Scores/Ganz Strategy Score 165.41.json
+scores/Low Scores/Ganz Strategy Score 165.60.json
+scores/Low Scores/Ganz Strategy Score 165.61.json
+scores/Low Scores/Ganz Strategy Score 165.70.json
+scores/Low Scores/Ganz Strategy Score 165.81.json
+scores/Low Scores/Ganz Strategy Score 165.86.json
+scores/Low Scores/Ganz Strategy Score 166.02.json
+scores/Low Scores/Ganz Strategy Score 166.04.json
+scores/Low Scores/Ganz Strategy Score 166.10.json
+scores/Low Scores/Ganz Strategy Score 166.12.json
+scores/Low Scores/Ganz Strategy Score 166.13.json
+scores/Low Scores/Ganz Strategy Score 166.17.json
+scores/Low Scores/Ganz Strategy Score 166.24.json
+scores/Low Scores/Ganz Strategy Score 166.32.json
+scores/Low Scores/Ganz Strategy Score 166.46.json
+scores/Low Scores/Ganz Strategy Score 166.47.json
+scores/Low Scores/Ganz Strategy Score 166.58.json
+scores/Low Scores/Ganz Strategy Score 166.63.json
+scores/Low Scores/Ganz Strategy Score 166.72.json
+scores/Low Scores/Ganz Strategy Score 166.73.json
+scores/Low Scores/Ganz Strategy Score 166.80.json
+scores/Low Scores/Ganz Strategy Score 166.86.json
+scores/Low Scores/Ganz Strategy Score 166.92.json
+scores/Low Scores/Ganz Strategy Score 167.09.json
+scores/Low Scores/Ganz Strategy Score 167.15.json
+scores/Low Scores/Ganz Strategy Score 167.16.json
+scores/Low Scores/Ganz Strategy Score 167.26.json
+scores/Low Scores/Ganz Strategy Score 167.55.json
+scores/Low Scores/Ganz Strategy Score 167.56.json
+scores/Low Scores/Ganz Strategy Score 167.61.json
+scores/Low Scores/Ganz Strategy Score 168.18.json
+scores/Low Scores/Ganz Strategy Score 168.33.json
+scores/Low Scores/Ganz Strategy Score 168.51.json
+scores/Low Scores/Ganz Strategy Score 168.55.json
+scores/Low Scores/Ganz Strategy Score 168.66.json
+scores/Low Scores/Ganz Strategy Score 168.70.json
+scores/Low Scores/Ganz Strategy Score 169.03.json
+scores/Low Scores/Ganz Strategy Score 169.04.json
+scores/Low Scores/Ganz Strategy Score 169.10.json
+scores/Low Scores/Ganz Strategy Score 169.20.json
+scores/Low Scores/Ganz Strategy Score 169.35.json
+scores/Low Scores/Ganz Strategy Score 169.37.json
+scores/Low Scores/Ganz Strategy Score 169.42.json
+scores/Low Scores/Ganz Strategy Score 169.45.json
+scores/Low Scores/Ganz Strategy Score 169.54.json
+scores/Low Scores/Ganz Strategy Score 169.59.json
+scores/Low Scores/Ganz Strategy Score 169.67.json
+scores/Low Scores/Ganz Strategy Score 169.90.json
+scores/Low Scores/Ganz Strategy Score 170.03.json
+scores/Low Scores/Ganz Strategy Score 170.05.json
+scores/Low Scores/Ganz Strategy Score 170.10.json
+scores/Low Scores/Ganz Strategy Score 170.13.json
+scores/Low Scores/Ganz Strategy Score 170.14.json
+scores/Low Scores/Ganz Strategy Score 170.17.json
+scores/Low Scores/Ganz Strategy Score 170.19.json
+scores/Low Scores/Ganz Strategy Score 170.21.json
+scores/Low Scores/Ganz Strategy Score 170.30.json
+scores/Low Scores/Ganz Strategy Score 170.31.json
+scores/Low Scores/Ganz Strategy Score 170.41.json
+scores/Low Scores/Ganz Strategy Score 170.43.json
+scores/Low Scores/Ganz Strategy Score 170.44.json
+scores/Low Scores/Ganz Strategy Score 170.46.json
+scores/Low Scores/Ganz Strategy Score 170.47.json
+scores/Low Scores/Ganz Strategy Score 170.65.json
+scores/Low Scores/Ganz Strategy Score 170.73.json
+scores/Low Scores/Ganz Strategy Score 170.74.json
+scores/Low Scores/Ganz Strategy Score 170.76.json
+scores/Low Scores/Ganz Strategy Score 170.78.json
+scores/Low Scores/Ganz Strategy Score 170.85.json
+scores/Low Scores/Ganz Strategy Score 170.94.json
+scores/Low Scores/Ganz Strategy Score 171.05.json
+scores/Low Scores/Ganz Strategy Score 171.17.json
+scores/Low Scores/Ganz Strategy Score 171.24.json
+scores/Low Scores/Ganz Strategy Score 171.26.json
+scores/Low Scores/Ganz Strategy Score 171.29.json
+scores/Low Scores/Ganz Strategy Score 171.30.json
+scores/Low Scores/Ganz Strategy Score 171.38.json
+scores/Low Scores/Ganz Strategy Score 171.54.json
+scores/Low Scores/Ganz Strategy Score 171.56.json
+scores/Low Scores/Ganz Strategy Score 171.67.json
+scores/Low Scores/Ganz Strategy Score 171.75.json
+scores/Low Scores/Ganz Strategy Score 171.76.json
+scores/Low Scores/Ganz Strategy Score 171.77.json
+scores/Low Scores/Ganz Strategy Score 171.83.json
+scores/Low Scores/Ganz Strategy Score 171.88.json
+scores/Low Scores/Ganz Strategy Score 171.89.json
+scores/Original Hill/Ganz Strategy Score 172.00.json
+scores/Original Hill/Ganz Strategy Score 172.01.json
+scores/Original Hill/Ganz Strategy Score 172.05.json
+scores/Original Hill/Ganz Strategy Score 172.55.json
+scores/Original Hill/Ganz Strategy Score 172.60.json
+scores/Original Hill/Ganz Strategy Score 172.62.json
+scores/Original Hill/Ganz Strategy Score 172.71.json
+scores/Original Hill/Ganz Strategy Score 172.75.json
+scores/Original Hill/Ganz Strategy Score 172.81.json
+scores/Original Hill/Ganz Strategy Score 172.84.json
+scores/Original Hill/Ganz Strategy Score 172.85.json
+scores/Original Hill/Ganz Strategy Score 173.26.json
+scores/Original Hill/Ganz Strategy Score 173.52.json
+scores/Positive Only Seeds/Ganz Strategy Score 66.74.json
+scores/Positive Only Seeds/Ganz Strategy Score 71.21.json
+scores/Positive Only Seeds/Ganz Strategy Score 76.94.json
+scores/Positive Only Seeds/Ganz Strategy Score 77.02.json
+scores/Positive Only Seeds/Ganz Strategy Score 77.06.json
+scores/Positive Only Seeds/Ganz Strategy Score 77.55.json
+scores/Positive Only Seeds/Ganz Strategy Score 79.77.json
+scores/Positive Only Seeds/Ganz Strategy Score 80.23.json
+scores/Positive Only Seeds/Ganz Strategy Score 81.00.json
+scores/Positive Only Seeds/Ganz Strategy Score 81.92.json
+scores/Positive Only Seeds/Ganz Strategy Score 82.76.json
+scores/Positive Only Seeds/Ganz Strategy Score 83.04.json
+scores/Positive Only Seeds/Ganz Strategy Score 83.69.json
+scores/Positive Only Seeds/Ganz Strategy Score 84.53.json
+scores/Positive Only Seeds/Ganz Strategy Score 84.72.json
+scores/Positive Only Seeds/Ganz Strategy Score 84.86.json
+scores/Positive Only Seeds/Ganz Strategy Score 85.16.json
+scores/Positive Only Seeds/Ganz Strategy Score 85.19.json
+scores/Positive Only Seeds/Ganz Strategy Score 85.67.json
+scores/Positive Only Seeds/Ganz Strategy Score 85.73.json
+scores/Positive Only Seeds/Ganz Strategy Score 85.86.json
+scores/Positive Only Seeds/Ganz Strategy Score 86.65.json
+scores/Positive Only Seeds/Ganz Strategy Score 87.07.json
+scores/Positive Only Seeds/Ganz Strategy Score 88.76.json
+scores/Positive Only Seeds/Ganz Strategy Score 89.28.json
+scores/Positive Only Seeds/Ganz Strategy Score 89.35.json
+scores/Positive Only Seeds/Ganz Strategy Score 89.71.json
+scores/Positive Only Seeds/Ganz Strategy Score 89.87.json
+scores/Positive Only Seeds/Ganz Strategy Score 90.14.json
+scores/Positive Only Seeds/Ganz Strategy Score 91.18.json
+scores/Positive Only Seeds/Ganz Strategy Score 91.78.json
+scores/Positive Only Seeds/Ganz Strategy Score 92.31.json
+scores/Positive Only Seeds/Ganz Strategy Score 92.48.json
+scores/Positive Only Seeds/Ganz Strategy Score 93.14.json
+scores/Positive Only Seeds/Ganz Strategy Score 93.65.json
+scores/Positive Only Seeds/Ganz Strategy Score 93.81.json
+scores/Positive Only Seeds/Ganz Strategy Score 93.99.json
+scores/Positive Only Seeds/Ganz Strategy Score 96.06.json
