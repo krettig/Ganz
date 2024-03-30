@@ -211,7 +211,14 @@ class LoadStrategy(Strategy):
         return chosen_play
     
     def save_strategy_with_score(self, average_score):
-        filename = f"scores\Ganz Strategy Score {average_score:.2f}.json"
+        #filename = f"scores\Ganz Strategy Score {average_score:.2f}.json"
+        
+        folder_name = "scores"
+        filename = os.path.join(folder_name, f"Ganz Strategy Score {average_score:.2f}.json")
+
+        # Check if the folder exists, if not, create it
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
 
         # Convert NumPy int32 values to Python int
         def convert_numpy(obj):
