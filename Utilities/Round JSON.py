@@ -1,5 +1,8 @@
 import json
 
+# After running some data manipulation routines, a lot of the values will be long decimals.  This utility will round all of those numbers to make them easier to read.  
+# Be sure to calculate average score (10K runs) before rounding and after rounding to make sure that rounding did not cause sub-par play
+
 def round_json_values(input_filename, output_filename):
     # Load the data from the input JSON file
     with open(input_filename, 'r') as file:

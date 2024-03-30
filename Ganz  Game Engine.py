@@ -12,6 +12,8 @@ from copy import deepcopy
 
 import os
 
+# These are the strategy options that can used from ganz_strategies.py
+# LoadStrategy is the main strategy I've been using;  InteraciveStrategy lets the user decide what to play.  I.e., similulate a real game
 from ganz_strategies import LoadStrategy, InteractiveStrategy, ConservativeStrategy, AggressiveStrategy, BasicStrategy, BasicStrategy2
 
 
@@ -21,6 +23,7 @@ class GanzSchonClever:
     def __init__(self, debug_level=5, seed=None):
         self.DEBUG_LEVEL = debug_level
 
+        # If a game seed has been set, use it.  Else create a random seed
         if seed is not None:
             self.seed_value = seed
         else:
@@ -28,12 +31,13 @@ class GanzSchonClever:
        
         random.seed(self.seed_value)
         
+        #TODO - use logging framework instead of print statements
         if debug_level > 2:
             print(f"Seed: {self.seed_value}")
 
         self.strategy = None  # Default strategy
         self.rounds = 6  # Total rounds in a game
-        self.turns_per_round = 4  # Turns per round
+        self.turns_per_round = 4  # Turns per round; 3 active and 1 passive
         self.dice_colors = [ 'yellow', 'blue', 'green', 'orange', 'purple','white']
         # Initialize dice with the value and "In Play" status
         self.dice = {color: (0, True) for color in self.dice_colors}  # Value is set to 0 initially
@@ -44,12 +48,11 @@ class GanzSchonClever:
 
         self.most_recently_scored_box = None  # Format: (color, index)
 
-
+        # Configure the score sheet
         self.score_sheet = {
             'yellow': [(val == 0, val) for val in [3, 6, 5, 0, 2, 1, 0, 5, 1, 0, 2, 4, 0, 3, 4, 6]],
             'blue': [(False, i + 2) for i in range(11)],  # Values from 2 to 12
             'green': [(False, (i % 5) + 1) if i != 10 else (False, 6) for i in range(11)],  # Values 1,2,3,4,5,1,2,3,4,5,6
-            # Not sure why orange and purple boxes are being treated differntly right here.  TODO: make them work the same
             'orange': [None for _ in range(11)],  # Initialize with None values
             'purple': [None for _ in range(11)],  # Initialize with None values
         }
@@ -63,6 +66,7 @@ class GanzSchonClever:
             } 
         }
         
+        # Combo bonuses.  I.e., Fill in these squares and get this bonus
         self.bonuses = {
             'yellow': {
                 (0, 1, 2, 3): {'bonus': 'blue'},
@@ -113,20 +117,21 @@ class GanzSchonClever:
                 9: { 'bonus': 'orange', 'value': 6},
                 10: { 'bonus': 'extra_die'}
             } ,
+            # Bonuses awarded at the start of each round
             'round_bonuses': {
                 1: {'bonus': 'reroll'},
                 2: {'bonus': 'extra_die'},
                 3: {'bonus': 'reroll'},
-                4: {'bonus': 'black'}
+                4: {'bonus': 'black'}  #black is my term meaning it can be played in any square in any color
             }
         }
 
         self.applied_bonuses = set()
 
+        # I was going to use these cool unicode emojis on the scoreboard, but they were too disctracting
         # self.fox_emoji = '🦊'
         # self.extra_die_emoji = '🎲'
         # self.reroll_emoji = '🔁'
-
 
         self.current_round = 1
         self.current_turn = 0
@@ -135,7 +140,7 @@ class GanzSchonClever:
         self.strategy = strategy
 
     def print_header(self):    
-        
+
         if self.DEBUG_LEVEL > 2:
             current_datetime = datetime.now()
             formatted_datetime = f"{'*' * 40} {current_datetime} {'*' * 40}"
@@ -162,8 +167,7 @@ class GanzSchonClever:
         
   
     def roll_dice(self):
-        #print(f"Rolling dice with seed: {self.seed_value}")
-        
+        #print(f"Rolling dice with seed: {self.seed_value}")        
         # Simulate rolling the dice that are in play
         for color in self.dice:
             if self.dice[color][1]:  # Check if the die is in play
@@ -198,8 +202,6 @@ class GanzSchonClever:
                 for color, value in in_play_dice
             ])
             not_in_play_str = ', '.join([get_colored_string(str(value), color) for color, value in not_in_play_dice])
-
-
 
             # Print the formatted strings
             if self.DEBUG_LEVEL > 2:
@@ -256,7 +258,7 @@ class GanzSchonClever:
                 continue  # Skip dice that are not in play
             self.find_legal_play(color, value, legal_plays)
         
-        # Add reroll as a legal play if available
+        # Add reroll as a legal play if available and in active turns
         if self.reroll_counter > 0 and self.current_turn < 4 and include_reroll:
             legal_plays.append(('reroll', self.reroll_counter, None, None))
 
@@ -287,8 +289,6 @@ class GanzSchonClever:
                 legal_plays.append(('black', value, color, next_index))
 
         return legal_plays
-           
-
 
     def call_strategy(self, legal_plays, is_bonus):
         if self.strategy:
@@ -304,7 +304,7 @@ class GanzSchonClever:
             
             return self.strategy.choose_play(legal_plays,context)
         else:
-            # Default behavior or throw an error
+            # Throw an error
             raise ValueError("Strategy not set!")
         
 
@@ -326,7 +326,6 @@ class GanzSchonClever:
         self.check_for_bonuses(chosen_play)
 
     def apply_score_and_multiplier(self, score_color, index, value):
-        #box_identifier = f"{score_color[0].upper()}{index + 1}"
         box_identifier = f"{score_color[0].upper()}{index}" # stick with 0 based
         # Save most recently scored box so we can highlight it on scorecard
         self.most_recently_scored_box = (score_color, index)
@@ -340,16 +339,11 @@ class GanzSchonClever:
         elif score_color == 'orange':
             self.score_sheet[score_color][index] = value
             print_colored(f"Scored box: {box_identifier} [{value}]", color=score_color, debug_level=self.DEBUG_LEVEL, min_debug_level=3)
-        # elif score_color == 'purple':
-        #     self.score_sheet[score_color].append(value)
-        #     print_colored(f"Scored box: {box_identifier} [{value}]", color=score_color, debug_level=self.DEBUG_LEVEL, min_debug_level=3)
         elif score_color == 'purple':
             next_index = next((i for i, box in enumerate(self.score_sheet['purple']) if box is None), None)
             if next_index is not None:
                 self.score_sheet[score_color][next_index] = value
                 print_colored(f"Scored box: {box_identifier} [{value}]", color=score_color, debug_level=self.DEBUG_LEVEL, min_debug_level=3)
-
-
 
         # Apply multipliers for orange score sheet
         if score_color == 'orange':
@@ -363,20 +357,12 @@ class GanzSchonClever:
         if self.DEBUG_LEVEL < 3:
             return
 
-        # Initialize strings for each row
+        # Initialize strings for each row of the printed scoresheet
         row1 = get_colored_string("Yellow", 'yellow') + "\t\t" + get_colored_string("Blue", 'blue')
         row2 = ""
         row3 = ""
         row4 = ""
         row5 = ""
-
-
-        # def triggers_bonus_color(color, index):
-        #     if color in self.bonuses:
-        #         for pattern, bonus_info in self.bonuses[color].items():
-        #             if isinstance(pattern, tuple) and index in pattern:
-        #                 return bonus_info['bonus']  # Return the bonus type
-        #     return None
 
         # Function to check if a box triggers a bonus
         def triggers_bonus(color, index):
@@ -481,34 +467,14 @@ class GanzSchonClever:
                 for _ in range(len(self.score_sheet[color]), 11):
                     score_str += "* "  # Add empty spaces for purple, Hmm... not totally sure why this is necessary
                 row4 += score_str
-            
-
-        # orange_str = get_colored_string("Orange: ", 'orange')
-        # for i, box in enumerate(self.score_sheet['orange']):
-        #     is_recently_scored = (self.most_recently_scored_box is not None and 'orange' == self.most_recently_scored_box[0] and i == self.most_recently_scored_box[1])
-        #     bonus_color = 'cyan' if triggers_bonus('orange', index) else None             
-        #     background_color = 'orange' if is_recently_scored else bonus_color
-        #     orange_str += get_colored_string(f"{box} ", 'orange', background_color=background_color) if box is not None else "* "
-        # row3 += orange_str
-
-
-        # purple_str = get_colored_string("Purple: ", 'purple')
-        # for index, value in enumerate(self.score_sheet['purple']):
-        #     is_recently_scored = ('purple' == self.most_recently_scored_box[0] and index == self.most_recently_scored_box[1])
-        #     bonus_color = 'cyan' if triggers_bonus('purple', index) else None
-        #     background_color = 'purple' if is_recently_scored else bonus_color
-        #     purple_str += get_colored_string(f"{value} ", 'purple',background_color=background_color)
-        # for _ in range(len(self.score_sheet['purple']), 11):
-        #     purple_str += "* "  # O for empty spaces in purple
-        # row4 += purple_str
-
+  
         # Print the combined strings
         print(row1)
         print(row2)
         print(row3)
         print(row4)
         print(row5)
-        print()  # Additional newline for separatio
+        print()  # Additional newline for separation
 
     def check_for_bonuses(self, chosen_play):
         die_color, value, score_color, index = chosen_play
@@ -542,7 +508,6 @@ class GanzSchonClever:
                         next_index = next((i for i, box in enumerate(self.score_sheet[bonus_type]) if box is None), None)
                     if next_index is not None:
                         self.update_score_sheet((bonus_type, bonus_info.get('value', value), bonus_type, next_index))
-                        #self.check_for_bonuses((bonus_type, bonus_info.get('value', value), bonus_type, next_index)) handling in update_score_sheet
                         print_colored(f"BONUS scored: {bonus_type}", debug_level=self.DEBUG_LEVEL, min_debug_level=3)
                 elif bonus_type in ['yellow', 'blue']:
                     legal_plays = []
@@ -551,7 +516,6 @@ class GanzSchonClever:
                         self.print_legal_plays(legal_plays)
                         chosen_play = self.call_strategy(legal_plays, is_bonus=True)
                         self.update_score_sheet(chosen_play)
-                        #self.check_for_bonuses(chosen_play) handling in update_score_sheet                               
                     else: 
                         print_colored(f"No legal plays for {bonus_type} bonus", debug_level=self.DEBUG_LEVEL, min_debug_level=3)
                 elif bonus_type == 'reroll':
@@ -567,8 +531,7 @@ class GanzSchonClever:
                     print_colored(f"You just got {bonus_info['value']} bonus points in {score_color}", debug_level=self.DEBUG_LEVEL, min_debug_level=3)
                 else:
                     print_colored(f"Unhandled BONUS TYPE: {bonus_type} !!!", debug_level=self.DEBUG_LEVEL, min_debug_level=3)
-        # else:
-        #     print_colored("No Bonus Found", debug_level=self.DEBUG_LEVEL, min_debug_level=10)
+        
         
     def prepare_passive_round(self):
         # Sort all dice by their value in ascending order
@@ -597,7 +560,7 @@ class GanzSchonClever:
                 legal_plays = self.find_legal_plays_from_dice(include_reroll=False)
 
                 # Add the option to decline playing the extra_die
-                legal_plays.append(('Decline Extra Die', 0, None, None)) # Using 0 as Die Value for sort order in Interactive
+                legal_plays.append(('Decline Extra Die', 0, None, None)) # Using 0 as Die Value for sort order in Interactive Strategy
 
                 if legal_plays:
                     chosen_play = self.call_strategy(legal_plays, is_bonus=False) # Even though it's the extra die bonus, the player is choosing, not the bonus
@@ -622,9 +585,6 @@ class GanzSchonClever:
                 # Decrement the extra_die bonus
                 self.extra_die_counter -= 1
     
-
-
-
     def calculate_score(self):
         # Yellow scoring
         yellow_score = 0
@@ -642,14 +602,10 @@ class GanzSchonClever:
         # Orange scoring
         orange_score = sum(value for i, value in enumerate(self.score_sheet['orange']) if value is not None)
         # Don't need to double or triple Orange value here since it was already done before it was put in the score box
-        # orange_score += sum(value for i, value in enumerate(self.score_sheet['orange']) if value is not None and i in (3, 6, 8))  # Double scoring for boxes 3, 6, and 8
-        # orange_score += 2 * sum(value for i, value in enumerate(self.score_sheet['orange']) if value is not None and i == 10)  # Triple scoring for box 10
-
+        
         # Purple scoring
-        # Not sure why this is not identical to Orange above
+        # Not sure why this logic is not identical to Orange above
         purple_score = sum(value for value in self.score_sheet['purple'] if value is not None)
-
-        #purple_score = sum(self.score_sheet['purple'])
 
         foxes = {
         'yellow': all(self.score_sheet['yellow'][i][0] for i in [12, 13, 14, 15]),
@@ -676,7 +632,6 @@ class GanzSchonClever:
             # Print the total number of foxes and fox points
             print(f"Total foxes: {total_foxes}")
         
-
         # Total score
         total_score = yellow_score + blue_score + green_score + orange_score + purple_score + fox_points
         if self.DEBUG_LEVEL > 2:
@@ -686,14 +641,11 @@ class GanzSchonClever:
             print(f"Orange Score: {orange_score}")
             print(f"Purple Score: {purple_score}")
             print(f"Fox points: {fox_points}")
-          # Clear the terminal output (cross-platform)
         if self.DEBUG_LEVEL > 2:
             print(f"Total Score: {total_score}")
 
         return total_score
-    
-    
-    
+        
     def play_turn(self):
         self.current_turn += 1
         if self.DEBUG_LEVEL>3:
@@ -718,7 +670,6 @@ class GanzSchonClever:
 
         self.print_dice_status()
         # Find legal plays from the current dice
-        #legal_plays = self.find_legal_plays_from_dice()
         legal_plays = self.find_legal_plays_from_dice(include_reroll=True)
 
         if legal_plays:  # If there are legal plays, select a die
@@ -729,7 +680,7 @@ class GanzSchonClever:
                 if self.DEBUG_LEVEL > 2:
                     print("NO LEGAL PLAYS")
                 chosen_play = (None, None, None, None)
-            else:  # In PASSIVE MODE, handle the SPECIAL CASE
+            else:  # In PASSIVE MODE, handle the SPECIAL CASE where if the lowest 3 dice can't be played, then the high dice are in play
                 if self.DEBUG_LEVEL > 2:
                     print("SPECIAL CASE !!!")
                 # Set all dice to in play
@@ -744,8 +695,6 @@ class GanzSchonClever:
                         print("STILL NO LEGAL PLAYS -- EVEN IN SPECIAL CASE")
                     chosen_play = (None, None, None, None)
 
-        #print(f"Selected die: {chosen_play}")
-        
         if chosen_play[0] == 'reroll':
             self.roll_dice()
             self.reroll_counter -= 1
@@ -759,9 +708,7 @@ class GanzSchonClever:
 
 
         self.update_score_sheet(chosen_play)
-
-        # Check for bonuses after updating the score sheet
-        #self.check_for_bonuses(chosen_play) handlng in update_score_sheet
+              
 
         # Remove selected die and any lower valued dice
         if chosen_play != (None, None, None, None):
@@ -958,6 +905,11 @@ def test_strategy_parameter(parameter_name, start, end, increment, parameter_ind
 
     # Return the highest score value and average score
     return highest_score_value, highest_average_score
+
+
+
+
+
 #################### Main loop ##################
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -990,6 +942,7 @@ elif test_specific_parameter:
     # Call the test_strategy_parameter function
     highest_value, highest_average = test_strategy_parameter(parameter, start_value, end_value, increment, num_games=num_games, parameter_index=parameter_index)
 
+    # The test_specific_parameter process usually takes a while to run, so email/text Kevin when it's done
     # Construct the email body as a string
     email_body = f"Optimize: {parameter}[{parameter_index}]; {start_value} to {end_value}, increment {increment}; {num_games} iterations\n {highest_average} for value: {highest_value}"
     # Send the email
@@ -998,9 +951,10 @@ elif test_specific_parameter:
     #test_strategy_parameter('remaining_boxes_multiplier', 200, 400, 10, num_games=100, parameter_index=5)
     #ganz_utils.send_email()
 else:
-    seed='1709680267962943172'
+    #seed='1709680267962943172'
     average_score=play_games(10000, manipulate_strategy=manipulate_strategy)
     #average_score=play_games(1, seed=seed, manipulate_strategy=manipulate_strategy)
+    #average_score=play_games(10) #Play 10 games
     # strategy = LoadStrategy()
     # strategy.save_strategy_with_score(average_score)
 

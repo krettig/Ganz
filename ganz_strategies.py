@@ -14,7 +14,7 @@ class Strategy(ABC):
     @abstractmethod
     def choose_play(self, legal_plays, context):
         pass
-
+# This is the main strategy I've been using -- loading various data from disk
 class LoadStrategy(Strategy):
     def __init__(self, data=None):
         if data is None:

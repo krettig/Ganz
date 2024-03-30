@@ -2,10 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import winsound
-
-
-
-
+import os
 
 # Define color codes for each die
 COLOR_CODES = {
@@ -64,7 +61,17 @@ def get_colored_string(message, foreground_color, background_color=None):
 def send_email(email_body="This is the body"):
     # Your email credentials
     email = "krettig@gmail.com"
-    password = "ijbe zylt jrfh ypjt"
+    config_file = "config.txt"
+
+    # Check if config.txt exists, if not, create it as an empty file
+    if not os.path.exists(config_file):
+        with open(config_file, "w") as file:
+            pass
+
+    # Read the password from config.txt
+    with open(config_file, "r") as file:
+        password = file.read().strip()
+   
     to_email="9372419474@vtext.com"
     #to_email="9372125786@vtext.com"
 
